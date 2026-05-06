@@ -49,7 +49,7 @@ const artisans = [
     role: 'MAÎTRE BRODEUR',
     detail: "Fil d'or · 9 ans à la maison",
     photo:
-      'public/founder.png',
+      '/founder.png',
   },
   {
     name: 'Esther N.',
@@ -67,9 +67,9 @@ const artisans = [
   },
 ];
 
-const FOUNDER_PHOTO = 'public/founder.png';
+const FOUNDER_PHOTO = '/founder.png';
 
-const ATELIER_INTERIOR ='public/atelier.jpg';
+const ATELIER_INTERIOR ='/atelier.jpg';
 
 export function About() {
   return (

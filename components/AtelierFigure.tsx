@@ -16,25 +16,25 @@ type Props = {
 const IMAGES: Record<Variant, string[]> = {
   // Distinguished African men in formal / dark robe contexts
   toge: [
-    'public/tog.png',
+    '/tog.png',
     'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=900&q=80&auto=format&fit=crop',
-    'public/481662466_3546478162313048_1082421674709600060_n.jpg',
+    '/481662466_3546478162313048_1082421674709600060_n.jpg',
   ],
   // African men in uniform / official attire
   uniform: [
-    'public/officer.png',
+    '/officer.png',
     'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900&q=80&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1556157382-97eda2d62296?w=900&q=80&auto=format&fit=crop',
   ],
   // African gentlemen in tailored suits
   suit: [
-    'public/ChatGPT Image 6 mai 2026, 09_41_06.png',
-    'public/kuba.jpg',
+    '/ChatGPT Image 6 mai 2026, 09_41_06.png',
+    '/kuba.jpg',
     'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=900&q=80&auto=format&fit=crop',
   ],
   // African women — wax prints, headwraps, couture
   dress: [
-    'public/profa.png',
+    '/profa.png',
     'https://images.unsplash.com/photo-1485290334039-a3c69043e517?w=900&q=80&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=900&q=80&auto=format&fit=crop',
   ],

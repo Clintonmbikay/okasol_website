@@ -38,7 +38,7 @@ export function AboutTeaser() {
       >
         {/* Atelier interior */}
         <img
-          src="public/atelier.jpg"
+          src="/atelier.jpg"
           alt="Atelier Maison OKASOL · Kinshasa"
           loading="lazy"
           className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
