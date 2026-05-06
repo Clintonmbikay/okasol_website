@@ -5,7 +5,15 @@ export function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    // Vérifier que window existe (SSR compatible)
+    if (typeof window !== 'undefined') {
+      // Utiliser setTimeout pour s'assurer que le DOM est prêt
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }, 0);
+    }
   }, [pathname]);
 
   return null;
