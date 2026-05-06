@@ -56,7 +56,10 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 sm:justify-between sm:items-center pt-6 mt-8 border-t border-[#2B2622] text-[11px] tracking-[0.22em] text-[#7A6E5C]">
-          <div>© 2025 MAISON OKASOL · TOUS DROITS RÉSERVÉS</div>
+          <div>
+            <div>© 2025 MAISON OKASOL · TOUS DROITS RÉSERVÉS</div>
+            <div className="text-[10px] tracking-[0.18em] text-[#5A4E3C] mt-1">Created and Design by Konnect-360°</div>
+          </div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-[#A89B89] transition-colors">INSTAGRAM</a>
             <a href="#" className="hover:text-[#A89B89] transition-colors">FACEBOOK</a>
