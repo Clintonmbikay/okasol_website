@@ -117,9 +117,6 @@ function PieceTile({
   piece: Piece;
   size: 'large' | 'medium';
 }) {
-  const figScale = size === 'large' ? 0.95 : 1.15;
-  const figSize = 'md';
-
   return (
     <div
       className="relative border border-[#2B2622] overflow-hidden cursor-pointer hover:border-[#C9A96E] transition-colors duration-500 group h-full"
