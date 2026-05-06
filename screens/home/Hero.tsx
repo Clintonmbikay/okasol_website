@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Eyebrow } from '../../components/Eyebrow';
@@ -37,11 +37,21 @@ const vignettes = [
 
 export function Hero() {
   const [index, setIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const v = vignettes[index];
   const total = vignettes.length;
 
   const prev = () => setIndex((i) => (i - 1 + total) % total);
   const next = () => setIndex((i) => (i + 1) % total);
+
+  // Auto-play toutes les 5 secondes
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      setIndex((i) => (i + 1) % total);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [isPaused, total]);
 
   return (
     <section className="flex flex-col lg:flex-row min-h-[calc(100vh-72px)] border-b border-[#2B2622]">
@@ -52,6 +62,8 @@ export function Hero() {
           background:
             'radial-gradient(ellipse at 30% 40%, #2A2421 0%, #15110E 70%, #0C0908 100%)',
         }}
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
       >
         {/* Center figure — keyed to retrigger zoom on change */}
         <div
