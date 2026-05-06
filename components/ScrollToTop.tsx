@@ -7,7 +7,6 @@ export function ScrollToTop() {
   useEffect(() => {
     // Vérifier que window existe (SSR compatible)
     if (typeof window !== 'undefined') {
-      // Utiliser setTimeout pour s'assurer que le DOM est prêt
       setTimeout(() => {
         window.scrollTo(0, 0);
         document.documentElement.scrollTop = 0;
